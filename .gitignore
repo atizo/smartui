@@ -1,1 +1,8 @@
-.sass-cache
+.DS_Store
+.svn
+.settings/
+.project
+.externalToolBuilders/
+log/*.log
+tmp/**
+node_modules/
