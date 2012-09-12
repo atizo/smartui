@@ -7,7 +7,7 @@
 		<title>smartui</title>
 
 		<meta name="description" content="Smart User Interfaces">
-		<meta name="author" content="Reto Aebersold">
+		<meta name="author" content="Atizo AG">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -25,10 +25,8 @@
 		
 		<div class="reveal">
 
-			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
 					<h1>smartui</h1>
@@ -46,7 +44,6 @@
 					</p>
 				</section>
 				
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
 						<h2>Goals</h2>
@@ -55,21 +52,43 @@
 						</p>
 					</section>
 					<section>
-						<h2>One Navigation</h2>
-						<p>Find the tools</p>
+						<h2>Smart Navigation</h2>
+						<p>Get the job done</p>
+						<ul>
+							<li>Lookup/Find</li>
+							<li>Explore/Play</li>
+							<li>Check In/Status</li>							
+							<li>Edit/Create</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Intelligent Layouting</h2>
+						<p>Utilize all the available space</p>
 					</section>
 					<section>
 						<h2>Component based</h2>
 						<p>Learn and (re)use</p>
 					</section>
 					<section>
-						<h2>On & Offline</h2>
-						<p>Sync</p>
+						<h2>Customizable</h2>
+						<p>Make it look the way you want</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Requirements</h2>						
+					</section>
+					<section>
+						<h2>Strong API</h2>
+						<p>Build components blisteringly fast</p>
+					</section>
+					<section>
+						<h2>On &amp; Offline</h2>
+						<p>Clean, powerful data synchronization</p>
 					</section>
 				</section>
 			</div>
 
-			<!-- The navigational controls UI -->
 			<aside class="controls">
 				<a class="left" href="#">&#x25C4;</a>
 				<a class="right" href="#">&#x25BA;</a>
@@ -77,39 +96,23 @@
 				<a class="down" href="#">&#x25BC;</a>
 			</aside>
 
-			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
 			
 		</div>
 
-		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
 		<script src="lib/js/head.min.js"></script>
 
 		<script>
-			// Load the main reveal.js script
 			head.js( 'js/reveal.js', function() {
-				// Parse the query string into a key/value object
 				var query = {};
 
 				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
 					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
 				} );
 
-				// Fires when a slide with data-state=customevent is activated
-				Reveal.addEventListener( 'customevent', function() {
-					console.log( '"customevent" has fired' );
-				} );
-
-				// Fires each time a new slide is activated
-				Reveal.addEventListener( 'slidechanged', function( event ) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				} );
-
 				// Full list of configuration options available here:
 				// https://github.com/hakimel/reveal.js#configuration
 				Reveal.initialize({
-					controls: true,
-					progress: true,
 					history: true,
 					
 					theme: query.theme || 'default', // default/neon/beige
@@ -117,10 +120,8 @@
 				});
 			} );
 			
-			// Load third party scripts
 			head.js( 'lib/js/classList.js' );
-			head.js( 'lib/js/highlight.js', function() {
-				// Fire off syntax highlighting for potential code samples in the slides
+			head.js( 'lib/js/highlight.js', function() {				
 				hljs.initHighlightingOnLoad();
 			} );
 		</script>
